@@ -2,7 +2,7 @@
 
     if($_SERVER["REQUEST_METHOD"] == "GET"){
         require_once "conexion.php";
-        $my_query = "Select c.nombre_carrera, f.nombre from carrera c inner join facultad f on c.id_facultad = f.codigo "; 
+        $my_query = "Select c.nombreCarrera, f.nombre from carrera c inner join facultad f on c.id_facultad = f.codigo "; 
         //$conn->query($my_querry);
         $result = $conn->query($my_query); 
         if($conn->affected_rows > 0){
